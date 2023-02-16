@@ -18,10 +18,11 @@ class App {
         this.port = process.env.PORT || 5000;
         this.production = process.env.NODE_ENV == 'production' ? true : false;
 
-        this.initalizeRoutes(routes);
-        this.initializeMiddlewares();
         // Kết nối mongodb
         this.connectToDatabase();
+        this.initializeMiddlewares();
+        this.initalizeRoutes(routes);
+        this.initalizelizeErrorMiddleware();
     }
 
     public listen() {
@@ -41,8 +42,11 @@ class App {
             this.app.use(morgan('dev'));
             this.app.use(cors({ origin: true, credentials: true }))
         }
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({ extended: true }));
+    }
+    private initalizelizeErrorMiddleware() {
         this.app.use(errorMiddleware);
-
     }
     private initalizeRoutes(routes: Route[]) {
         routes.forEach((route) => {

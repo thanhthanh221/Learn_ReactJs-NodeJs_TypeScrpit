@@ -1,7 +1,4 @@
 import React from "react";
-import { icons, images } from "../../constants";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconApp } from "../../components";
 
 const Admin = () => {
   return (
@@ -18,7 +15,7 @@ const Admin = () => {
             href="index.html"
           >
             <div className="sidebar-brand-icon rotate-n-15">
-              <IconApp icon={icons.LaughWink} />
+              <i className="fas fa-laugh-wink" />
             </div>
             <div className="sidebar-brand-text mx-3">
               SB Admin <sup>2</sup>
@@ -29,7 +26,7 @@ const Admin = () => {
           {/* Nav Item - Dashboard */}
           <li className="nav-item active">
             <a className="nav-link" href="index.html">
-              <IconApp icon={icons.TachometerAlt} />
+              <i className="fas fa-fw fa-tachometer-alt" />
               <span>Dashboard</span>
             </a>
           </li>
@@ -41,6 +38,7 @@ const Admin = () => {
           <li className="nav-item">
             <a
               className="nav-link collapsed"
+              href="#"
               data-toggle="collapse"
               data-target="#collapseTwo"
               aria-expanded="true"
@@ -70,6 +68,7 @@ const Admin = () => {
           <li className="nav-item">
             <a
               className="nav-link collapsed"
+              href="#"
               data-toggle="collapse"
               data-target="#collapseUtilities"
               aria-expanded="true"
@@ -170,7 +169,7 @@ const Admin = () => {
           <div className="sidebar-card d-none d-lg-flex">
             <img
               className="sidebar-card-illustration mb-2"
-              src={images.undraw_rocket}
+              src="img/undraw_rocket.svg"
               alt="..."
             />
             <p className="text-center mb-2">
@@ -181,7 +180,7 @@ const Admin = () => {
               className="btn btn-success btn-sm"
               href="https://startbootstrap.com/theme/sb-admin-pro"
             >
-              Nâng cấp Pro !
+              Upgrade to Pro!
             </a>
           </div>
         </ul>
@@ -362,7 +361,7 @@ const Admin = () => {
                       <div className="dropdown-list-image mr-3">
                         <img
                           className="rounded-circle"
-                          src={images.undraw_profile_1}
+                          src="img/undraw_profile_1.svg"
                           alt="..."
                         />
                         <div className="status-indicator bg-success" />
@@ -384,7 +383,7 @@ const Admin = () => {
                       <div className="dropdown-list-image mr-3">
                         <img
                           className="rounded-circle"
-                          src={images.undraw_profile_2}
+                          src="img/undraw_profile_2.svg"
                           alt="..."
                         />
                         <div className="status-indicator" />
@@ -404,7 +403,7 @@ const Admin = () => {
                       <div className="dropdown-list-image mr-3">
                         <img
                           className="rounded-circle"
-                          src={images.undraw_profile_3}
+                          src="img/undraw_profile_3.svg"
                           alt="..."
                         />
                         <div className="status-indicator bg-warning" />
@@ -467,7 +466,7 @@ const Admin = () => {
                     </span>
                     <img
                       className="img-profile rounded-circle"
-                      src="./assets/Images/undraw_profile.svg"
+                      src="img/undraw_profile.svg"
                     />
                   </a>
                   {/* Dropdown - User Information */}
@@ -886,10 +885,9 @@ const Admin = () => {
                       <div className="text-center">
                         <img
                           className="img-fluid px-3 px-sm-4 mt-3 mb-4"
-                          style={{
-                            width: "25rem",
-                          }}
-                          src={images.undraw_posting_photo}
+                          style={{ width: "25rem" }}
+                          src="img/undraw_posting_photo.svg"
+                          alt="..."
                         />
                       </div>
                       <p>
