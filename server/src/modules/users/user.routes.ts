@@ -15,9 +15,8 @@ export default class UsersRoute implements Route {
     };
 
     private initializeRoutes() {
-        this.router.post(this.path,
-            validationMiddleware(RegsiterDto, true),
-            this.UserController.register
-        ); // POST  
+        this.router.post(this.path, validationMiddleware(RegsiterDto, true), this.UserController.register); // POST  
+        this.router.put(this.path + "/:id", validationMiddleware(RegsiterDto, true), this.UserController.updateUser); // PUT
+        this.router.get(this.path, this.UserController.GetUserById); // GET 
     }
 }
